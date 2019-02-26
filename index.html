@@ -11,64 +11,22 @@
     <script>
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/WebGLTrackandField.json", {onProgress: UnityProgress});
     </script>
-
-    <style>
-	* {
-	  box-sizing: border-box;
-	}
-
-	/* Create two unequal columns that floats next to each other */
-	.column {
-	  float: left;
-	  padding: 10px;
-	  height: 300px; /* Should be removed. Only for demonstration */
-	}
-
-	.left {
-	  width: 25%;
-	}
-
-	.right {
-	  width: 75%;
-	}
-
-	/* Clear floats after the columns */
-	.row:after {
-	  content: "";
-	  display: table;
-	  clear: both;
-	}
-	</style>
   </head>
   <body>
-  	<section style="text-align:center">
-	  	<h1> Track & Field </h1>
-	  	<h3> Run While Learning Math! </h2>
-  	</section>
+  	<div class="webgl-content">
+      <div id="gameContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+        <div class="title">Track & Field</div>
+      </div>
+    </div>
 
-  	<div class="row">
-	  <div class="column left">
-
-	  	<div>
-	      <a href="https://tiff-yang.github.io/trackfield/JamVersion2_20/index.html">In Class Jam Version (2/20)</a> <br/>
-	      <a href="https://tiff-yang.github.io/trackfield/FocusTestVersion2_25/index.html">Focus Testing Version (2/25)</a> <br/>
-	      <a href="https://tiff-yang.github.io/trackfield/index.html">Final Version (2/27)</a> <br/>
-	    </div>
-
-	  </div>
-	  <div class="column right">
-	    
-	  	<div class="webgl-content">
-	      <div id="gameContainer" style="width: 960px; height: 600px"></div>
-	      <div class="footer">
-	        <div class="webgl-logo"></div>
-	        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
-	        <div class="title">Track & Field</div>
-	      </div>
-	    </div>
-
-	  </div>
-	</div>
+    <div style = "margin-top: 675px">
+      <a href="https://tiff-yang.github.io/trackfield/JamVersion2_20/index.html">Jam Version (2/20) </a> <br/>
+      <a href="https://tiff-yang.github.io/trackfield/FocusTestVersion2_25/index.html">Testing Version (2/25)</a> <br/>
+      <a href="https://tiff-yang.github.io/trackfield/index.html">Final Version (2/27)</a> <br/>
+    </div>
 
   </body>
 </html>
